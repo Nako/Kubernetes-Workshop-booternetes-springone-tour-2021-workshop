@@ -47,15 +47,15 @@ file: ~/exercises/code/customers/src/main/java/com/example/customers/CustomerRes
 Let's test it all out. Go to the root of the `customers` code and run:
 
 ```execute
-command: cd ~/exercises/code/customers
+cd ~/exercises/code/customers
 ```
 
 ```execute
-command: mvn -f pom.xml clean spring-boot:run
+mvn -f pom.xml clean spring-boot:run
 ```
 
 Use the `curl` CLI to invoke the `/customers` HTTP endpoint and confirm that you're given some data in response.
 
 ```execute-2
-command: curl localhost:8585/customers
+curl localhost:8585/customers
 ```
