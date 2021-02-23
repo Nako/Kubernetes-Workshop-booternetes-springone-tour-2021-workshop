@@ -10,7 +10,7 @@ modules:
     exit_sign: Start Workshop
   exercises/01-the-customer-service:
     name: The Cusomter Service
-  exercises/02-reactive-Programming:
+  exercises/02-reactive-programming:
     name: Reactive Programming 
   exercises/03-the-orders-service:
     name: The Orders Service
