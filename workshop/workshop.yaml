@@ -1,8 +1,9 @@
-name: Markdown Sample
+name: Booternetes Cloud Native Java Workshop 
 
 modules:
     activate:
         - workshop-overview
+        - workshop-overview-2
         - setup-environment
         - exercises/01-creating-an-application
         - exercises/02-building-the-application

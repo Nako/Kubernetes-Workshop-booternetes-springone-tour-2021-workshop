@@ -1,16 +1,16 @@
 apiVersion: training.eduk8s.io/v1alpha2
 kind: Workshop
 metadata:
-  name: lab-spring-boot-k8s-gs
+  name: lab-booternetes-springone
 spec:
   vendor: eduk8s.io
-  title: Getting Started with Spring Boot on Kubernetes
+  title: The Cloud Native Java Workshop for SpringOne Tour 2021 
   description: Create your first Spring Boot application and deploy it to Kubernetes
-  url: https://github.com/eduk8s-labs/lab-spring-boot-k8s-getting-started
-  duration: 15m
+  url: https://github.com/springone-tour-2021/booternetes-springone-tour-2021-workshop
+  duration: 60m
   content: 
     image: jdk11-environment:*
-    files: github.com/eduk8s-labs/lab-spring-boot-k8s-getting-started
+    files: github.com/springone-tour-2021/booternetes-springone-tour-2021-workshop
   session:
     namespaces:
       budget: large

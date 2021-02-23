@@ -1,6 +1,9 @@
 modules:
   workshop-overview:
     name: Workshop Overview
+    exit_sign: Continue
+  workshop-overview-2:
+    name: "Spring Boot: the Service Chassis"
     exit_sign: Setup Environment
   setup-environment:
     name: Setup Environment
