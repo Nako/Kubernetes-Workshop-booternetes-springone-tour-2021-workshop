@@ -5,8 +5,7 @@ modules:
         - workshop-overview
         - workshop-overview-2
         - setup-environment
-        - exercises/01-creating-an-application
-        - exercises/02-building-the-application
-        - exercises/03-containerize-application
-        - exercises/04-deploying-to-kubernetes
+        - exercises/01-the-customer-service
+        - exercises/02-reactive-Programming
+        - exercises/03-the-orders-service
         - workshop-summary

@@ -8,14 +8,12 @@ modules:
   setup-environment:
     name: Setup Environment
     exit_sign: Start Workshop
-  exercises/01-creating-an-application:
-    name: Creating an Application
-  exercises/02-building-the-application:
-    name: Building the Application
-  exercises/03-containerize-application:
-    name: Containerize the Application
-  exercises/04-deploying-to-kubernetes:
-    name: Deploying to Kubernetes
+  exercises/01-the-customer-service:
+    name: The Cusomter Service
+  exercises/02-reactive-Programming:
+    name: Reactive Programming 
+  exercises/03-the-orders-service:
+    name: The Orders Service
   workshop-summary:
     name: Workshop Summary
     exit_sign: Finish Workshop

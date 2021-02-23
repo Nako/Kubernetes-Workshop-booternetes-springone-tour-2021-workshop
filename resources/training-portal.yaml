@@ -1,11 +1,11 @@
 apiVersion: training.eduk8s.io/v1alpha1
 kind: TrainingPortal
 metadata:
-  name: lab-spring-boot-k8s-gs
+  name: lab-booternetes-springone
 spec:
   workshops:
-    - name: lab-spring-boot-k8s-gs
+    - name: lab-booternetes-springone
       reserved: 1
-      capacity: 5
+      capacity: 1
       expires: 60m
       orphaned: 5m
