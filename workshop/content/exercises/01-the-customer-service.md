@@ -52,8 +52,6 @@ command: cd ~/code/customers
 command: mvn -f pom.xml clean spring-boot:run 
 ```
 
-```
-
 Use the `curl` CLI to invoke the `/customers` HTTP endpoint and confirm that you're given some data in response. 
 
 ```terminal:execute
