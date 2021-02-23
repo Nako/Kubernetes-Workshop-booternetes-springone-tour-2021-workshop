@@ -1,4 +1,4 @@
-Let's stand up a simple service to handle `Order` data.
+Now let's stand up a simple service to handle `Order` data.
 
 ### The Build
 
@@ -48,17 +48,21 @@ Let's test it all out. Go to the root of the `customers` code and run:
 
 ```terminal:execute
 cd ~/exercises/code/customers
-```
-
-```terminal:execute
 mvn -f pom.xml clean spring-boot:run
 ```
 
-````
-
-Use the `curl` CLI to invoke the `/customers` HTTP endpoint and confirm that you're given some data in response.
+Use the `curl` CLI to invoke the `/orders` HTTP endpoint and confirm that you're given some data in response.
 
 ```execute-2
-curl localhost:8585/customers
+curl localhost:8585/orders
 ```
 
+When you're done testing, stop the application.
+
+```terminal:interrupt
+session: 1
+```
+
+```terminal:clear-all
+
+```

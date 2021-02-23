@@ -5,7 +5,7 @@ Let's stand up a simple service to handle `Customer` data.
 We will change to the Apache Maven build.
 
 ```editor:open-file
-file: ~/exercises/code/orders/pom.xml
+file: ~/exercises/code/customers/pom.xml
 ```
 
 This build includes dependencies for `R2DBC`, the `Wavefront` observability platform, `Reactive Web`, `Actuator`, `Lombok`, the `H2`, and `Java 11`.
@@ -15,19 +15,19 @@ This build includes dependencies for `R2DBC`, the `Wavefront` observability plat
 Let's look at the Java code. There are a few exciting players here. We'll need an entry point class.
 
 ```editor:open-file
-file: ~/exercises/code/orders/src/main/java/com/example/orders/OrdersApplication.java
+file: ~/exercises/code/customers/src/main/java/com/example/customers/CustomersApplication.java
 ```
 
-We're going to read and write data to a SQL database table called `orders`. We'll need an entity class.
+We're going to read and write data to a SQL database table called `customers`. We'll need an entity class.
 
 ```editor:open-file
-file: ~/exercises/code/orders/src/main/java/com/example/orders/Order.java
+file: ~/exercises/code/customers/src/main/java/com/example/customers/Customer.java
 ```
 
 We'll need a Spring Data repository.
 
 ```editor:open-file
-file: ~/exercises/code/orders/src/main/java/com/example/orders/OrderRepository.java
+file: ~/exercises/code/customers/src/main/java/com/example/customers/CustomerRepository.java
 ```
 
 We're going to read and write data to a SQL database table called `orders`. The H2 SQL database is an embedded, in-memory SQL database that will lose its state on every restart. We'll need to initialize it.
@@ -48,14 +48,19 @@ Let's test it all out. Go to the root of the `customers` code and run:
 
 ```execute
 cd ~/exercises/code/customers
-```
-
-```execute
 mvn -f pom.xml clean spring-boot:run
 ```
-
-Use the `curl` CLI to invoke the `/customers` HTTP endpoint and confirm that you're given some data in response.
+Wait until the it finishes building and starts running. Then use the `curl` CLI to invoke the `/customers` HTTP endpoint and confirm that you're given some data in response.
 
 ```execute-2
 curl localhost:8585/customers
+```
+
+When you're done testing, stop the application. 
+
+```terminal:interrupt
+session: 1
+```
+
+```terminal:clear-all
 ```

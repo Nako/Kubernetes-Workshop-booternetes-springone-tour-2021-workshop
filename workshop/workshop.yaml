@@ -8,4 +8,6 @@ modules:
         - exercises/01-the-customer-service
         - exercises/02-reactive-programming
         - exercises/03-the-orders-service
+        - exercises/04-living-on-the-edge
+        - exercises/05-adding-observability
         - workshop-summary

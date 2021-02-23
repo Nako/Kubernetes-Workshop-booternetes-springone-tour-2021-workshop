@@ -14,6 +14,10 @@ modules:
     name: Reactive Programming 
   exercises/03-the-orders-service:
     name: The Orders Service
+  exercises/04-living-on-the-edge:
+    name: Living on the Edge 
+  exercises/05-adding-observability:
+    name: Integrating Observability with the Spring Boot Actuator Module and Wavefront 
   workshop-summary:
     name: Workshop Summary
     exit_sign: Finish Workshop
