@@ -1,33 +1,9 @@
 
 ### Go Time
 
-Let's test it all out. Go to the root of the `gateway` code and run:
+Let's test it all out. 
 
 ```dashboard:open-url
-url: http://gateway-${SESSION_NAMESPACE}.${INGRESS_DOMAIN}/cos
+url: http://gateway-{{ session_namespace }}.{{ ingress_domain }}/cos
 ```
 
-
-```execute
-cd ~/exercises/code/gateway
-mvn clean spring-boot:run
-
-```
-
-Use the `curl` CLI to invoke the `/cos` HTTP endpoint.
-
-```execute-2
-curl localhost:9999/cos
-```
-
-You should be staring at JSON containing both your customer data and the orders for each customer. Congratulations!
-
-When you're done testing, stop the application.
-
-```terminal:interrupt
-session: 1
-```
-
-```terminal:clear-all
-
-```

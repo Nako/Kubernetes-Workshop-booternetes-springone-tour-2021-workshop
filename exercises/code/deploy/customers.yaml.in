@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: customers
-          image: {{ registry_host }}/customers
+          image: ${REGISTRY_HOST}/customers
           env:
             - name: SERVER_PORT
               value: "8080"

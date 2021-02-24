@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: orders
-          image: {{ registry_host }}/orders
+          image: ${REGISTRY_HOST}/orders
           env:
             - name: SPRING_RSOCKET_SERVER_PORT
               value: "8080"
