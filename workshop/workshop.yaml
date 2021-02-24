@@ -10,4 +10,7 @@ modules:
         - exercises/03-the-orders-service
         - exercises/04-living-on-the-edge
         - exercises/05-adding-observability
+        - exercises/06-buildpacks
+        - exercises/07-deploy-to-kube
+        - exercises/08-test-it-all-out
         - workshop-summary
