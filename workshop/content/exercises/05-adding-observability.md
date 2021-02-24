@@ -53,25 +53,25 @@ mvn clean spring-boot:run
 Let's check out what endpoints have been added.
 
 ```execute-2
-curl localhost:8585/actuator
+curl localhost:8585/actuator | jq -r
 ```
 
 We can see the metrics information here:
 
 ```execute-2
-curl localhost:8585/actuator/metrics
+curl localhost:8585/actuator/metrics | jq -r
 ```
 
 And the health endpoint for Kubernetes liveness and readiness probes
 
 ```execute-2
-curl localhost:8585/actuator/health
+curl localhost:8585/actuator/health | jq -r
 ```
 
 And this will show us the application's environment variables.
 
 ```execute-2
-curl localhost:8585/actuator/env
+curl localhost:8585/actuator/env | jq -r
 ```
 
 These are only a sampling of the endpoints and opportunities that Spring Boot Actuator represents.

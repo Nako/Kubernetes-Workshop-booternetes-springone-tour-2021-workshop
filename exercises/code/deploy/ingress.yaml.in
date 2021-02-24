@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: gateway
+  labels:
+    app: blog
+spec:
+  rules:
+  - host: blog-${SESSION_NAMESPACE}.${INGRESS_DOMAIN}
+    http:
+      paths:
+      - path: "/"
+        backend:
+          serviceName: gateway-service
+          servicePort: 8080

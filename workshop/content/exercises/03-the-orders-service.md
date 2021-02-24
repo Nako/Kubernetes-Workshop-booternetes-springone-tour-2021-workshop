@@ -33,21 +33,21 @@ file: ~/exercises/code/orders/src/main/java/com/example/orders/OrderRepository.j
 We're going to read and write data to a SQL database table called `orders`. The H2 SQL database is an embedded, in-memory SQL database that will lose its state on every restart. We'll need to initialize it.
 
 ```editor:open-file
-file: ~/exercises/code/customers/src/main/java/com/example/customers/CustomersListener.java
+file: ~/exercises/code/orders/src/main/java/com/example/orders/OrdersListener.java
 ```
 
-And, finally, we want to export an HTTP endpoint, `/customers`.
+And, finally, we want to export an HTTP endpoint, `/orders`.
 
 ```editor:open-file
-file: ~/exercises/code/customers/src/main/java/com/example/customers/CustomerRestController.java
+file: ~/exercises/code/orders/src/main/java/com/example/orders/OrdersRSocketController.java
 ```
 
 ### Go Time
 
-Let's test it all out. Go to the root of the `customers` code and run:
+Let's test it all out. Go to the root of the `orders` code and run:
 
-```terminal:execute
-cd ~/exercises/code/customers
+```execute
+cd ~/exercises/code/orders
 mvn -f pom.xml clean spring-boot:run
 ```
 
