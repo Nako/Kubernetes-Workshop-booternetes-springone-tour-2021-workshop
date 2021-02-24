@@ -19,10 +19,9 @@ spec:
           image: ${REGISTRY_HOST}/customers
           env:
             - name: SERVER_PORT
-              value: "8080"
+              value: "8585"
           ports:
-            - containerPort: 8080
-              hostPort: 80
+            - containerPort: 8585
 
 ---
 apiVersion: v1
@@ -33,6 +32,6 @@ spec:
   selector:
     app: customers
   ports:
-    - port: 80
-      targetPort: 8080
+    - port: 8585
+      targetPort: 8585
       protocol: TCP
