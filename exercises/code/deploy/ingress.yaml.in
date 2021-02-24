@@ -1,15 +1,18 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: gateway
   labels:
-    app: blog
+    app: gateway
 spec:
   rules:
   - host: gateway-${SESSION_NAMESPACE}.${INGRESS_DOMAIN}
     http:
       paths:
-      - path: "/"
+      - path: /
+        pathType: Prefix
         backend:
-          serviceName: gateway-service
-          servicePort: 9999
+          service:
+            name: gateway-service
+            port:
+              number: 9999

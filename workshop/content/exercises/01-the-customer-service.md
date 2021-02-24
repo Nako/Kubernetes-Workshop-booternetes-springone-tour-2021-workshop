@@ -53,7 +53,7 @@ mvn -f pom.xml clean spring-boot:run
 Wait until the it finishes building and starts running. Then use the `curl` CLI to invoke the `/customers` HTTP endpoint and confirm that you're given some data in response.
 
 ```execute-2
-curl localhost:8585/customers
+curl localhost:8585/customers | jq -r
 ```
 
 When you're done testing, stop the application. 

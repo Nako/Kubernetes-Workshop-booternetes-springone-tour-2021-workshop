@@ -54,7 +54,7 @@ mvn -f pom.xml clean spring-boot:run
 Use the `rsc` CLI to invoke the `/orders` RSocket endpoint and confirm that you're given some data in response.
 
 ```execute-2
-rsc tcp://localhost:8181 -r orders.3 --stream
+rsc tcp://localhost:8181 -r orders.3 --stream | jq -r
 ```
 
 When you're done testing, stop the application.
