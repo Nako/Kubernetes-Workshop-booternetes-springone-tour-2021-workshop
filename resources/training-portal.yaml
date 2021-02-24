@@ -3,6 +3,11 @@ kind: TrainingPortal
 metadata:
   name: lab-booternetes-springone
 spec:
+  portal:
+    credentials:
+      admin:
+        username: admin
+        password: admin
   workshops:
     - name: lab-booternetes-springone
       reserved: 1
