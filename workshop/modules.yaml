@@ -9,7 +9,7 @@ modules:
     name: Setup Environment
     exit_sign: Start Workshop
   exercises/01-the-customer-service:
-    name: The Cusomter Service
+    name: The Customer Service
   exercises/02-reactive-programming:
     name: Reactive Programming 
   exercises/03-the-orders-service:
@@ -18,6 +18,12 @@ modules:
     name: Living on the Edge 
   exercises/05-adding-observability:
     name: Integrating Observability with the Spring Boot Actuator Module and Wavefront 
+  exercises/06-buildpacks:
+    name: Build with Buildpacks
+  exercises/07-deploy-to-kube:
+    name: Deploy to Kubernetes
+  exercises/08-test-it-all-out:
+    name: Test it all Out
   workshop-summary:
     name: Workshop Summary
     exit_sign: Finish Workshop

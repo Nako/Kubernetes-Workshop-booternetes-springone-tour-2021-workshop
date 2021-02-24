@@ -6,7 +6,7 @@ metadata:
     app: blog
 spec:
   rules:
-  - host: blog-${SESSION_NAMESPACE}.${INGRESS_DOMAIN}
+  - host: gateway-${SESSION_NAMESPACE}.${INGRESS_DOMAIN}
     http:
       paths:
       - path: "/"

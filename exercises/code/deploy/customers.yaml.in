@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: customers
-          image: gcr.io/bootiful/customers
+          image: {{ registry_host }}/customers
           env:
             - name: SERVER_PORT
               value: "8080"

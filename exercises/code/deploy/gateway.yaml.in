@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: gateway
-          image: gcr.io/bootiful/gateway
+          image: {{ registry_host }}/gateway
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: "cloud"
@@ -32,7 +32,7 @@ kind: Service
 metadata:
   name: gateway-service
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: gateway
   ports:

@@ -82,14 +82,6 @@ file: ~/exercises/code/gateway/src/main/java/com/example/gateway/CustomerOrdersR
 
 The port and the logical name for each of the services vary. There are default values for the other services' host and ports (`gateway.orders.hostname-and-port` and `gateway.customers.hostname-and-port`) specified in `application.properties` that work on `localhost`, but that won't work in production. We'll need to override them when it comes time to deploy. Spring Boot supports [12-factor style configuration](https://12factor.net/config), so we will redefine default values in production (without recompiling the application binaries). We'll use a Kubernetes `ConfigMap` to define values exposed to the application as environment variables, overriding the default values defined in `application.properties`.
 
-```editor:append-lines-to-file
-file: ~/exercises/code/orders/src/main/resources/application.properties
-text: |
-    gateway.customers.hostname-and-port=http://localhost:8585
-    gateway.orders.hostname-and-port=tcp://localhost:8181
-```
-<!-- todo how do we add only two properties from that file, `server.port`, and `spring.application.name`. The gateway also has two specific, custom properties, `gateway.orders.hostname-and-port` and `gateway.customers.hostname-and-port`. We'll add all the others later. -->
-
 We want some values only to be active when a particular condition is met. We were going to use Spring's concept of a profile, a label that - once switched on - could result in some specific configuration being executed or activated. You can use labels to parameterize the application's runtime environment and execution in different environments (e.g.: `production`, `staging`, `dev`). We will run the `gateway` application with the `SPRING_PROFLES_ACTIVE` environment variable set to `cloud`. Our Spring-based gateway application will start up, see an environment variable indicating that a particular profile should be active, and then load the regular configuration _and_ the profile-specific configuration into one hierarchy of configuration values. In this case, the profile-specific configuration lives in `application-cloud.properties`.
 
 ```editor:append-lines-to-file
@@ -99,30 +91,3 @@ text: |
     gateway.orders.hostname-and-port=tcp://${ORDERS_SERVICE_SERVICE_HOST}:${ORDERS_SERVICE_SERVICE_PORT}
 ```
 
-### Go Time
-
-Let's test it all out. Go to the root of the `gateway` code and run:
-
-```execute
-cd ~/exercises/code/gateway
-mvn clean spring-boot:run
-
-```
-
-Use the `curl` CLI to invoke the `/cos` HTTP endpoint.
-
-```execute-2
-curl localhost:9999/cos
-```
-
-You should be staring at JSON containing both your customer data and the orders for each customer. Congratulations!
-
-When you're done testing, stop the application.
-
-```terminal:interrupt
-session: 1
-```
-
-```terminal:clear-all
-
-```

@@ -36,7 +36,7 @@ We're going to read and write data to a SQL database table called `orders`. The 
 file: ~/exercises/code/orders/src/main/java/com/example/orders/OrdersListener.java
 ```
 
-And, finally, we want to export an HTTP endpoint, `/orders`.
+And, finally, we want to export an RSocket endpoint, `/orders`.
 
 ```editor:open-file
 file: ~/exercises/code/orders/src/main/java/com/example/orders/OrdersRSocketController.java
@@ -51,10 +51,10 @@ cd ~/exercises/code/orders
 mvn -f pom.xml clean spring-boot:run
 ```
 
-Use the `curl` CLI to invoke the `/orders` HTTP endpoint and confirm that you're given some data in response.
+Use the `rsc` CLI to invoke the `/orders` RSocket endpoint and confirm that you're given some data in response.
 
 ```execute-2
-curl localhost:8585/orders
+rsc tcp://localhost:8181 -r orders.3 --stream
 ```
 
 When you're done testing, stop the application.

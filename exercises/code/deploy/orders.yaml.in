@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: orders
-          image: gcr.io/bootiful/orders
+          image: {{ registry_host }}/orders
           env:
             - name: SPRING_RSOCKET_SERVER_PORT
               value: "8080"
