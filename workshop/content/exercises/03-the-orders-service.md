@@ -39,7 +39,7 @@ file: ~/exercises/code/orders/src/main/java/com/example/orders/OrdersListener.ja
 And, finally, we want to export an RSocket endpoint, `/orders`.
 
 ```editor:open-file
-file: ~/exercises/code/orders/src/main/java/com/example/orders/OrdersRSocketController.java
+file: ~/exercises/code/orders/src/main/java/com/example/orders/OrderRSocketController.java
 ```
 
 ### Go Time
