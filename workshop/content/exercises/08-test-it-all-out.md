@@ -1,6 +1,8 @@
 
 ### Go Time
 
+> Note: Please, wait for a few seconds until all the setup from the previous step is complete otherwise the following commands could fail until setup completes.
+
 Let's test it all out. First with `curl`.
 
 ```execute-2
