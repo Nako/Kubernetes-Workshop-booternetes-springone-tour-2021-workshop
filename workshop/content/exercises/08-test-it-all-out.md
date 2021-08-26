@@ -10,6 +10,6 @@ curl gateway-{{ session_namespace }}.{{ ingress_domain }}/cos | jq -r
 Now lets try it in the browser:
 
 ```dashboard:open-url
-url: https://gateway-{{ session_namespace }}.{{ ingress_domain }}/cos
+url: http://gateway-{{ session_namespace }}.{{ ingress_domain }}/cos
 ```
 
